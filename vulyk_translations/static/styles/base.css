@@ -1,0 +1,73 @@
+p.lead {
+    text-align: left;
+}
+
+.btn-group {
+    margin: 15px 0;
+}
+
+.checkbox label input[type="checkbox"] {
+    margin: 9px 10px -20px;
+}
+
+.checkbox label {
+    font-size: 0.9em;
+}
+
+.btn-group .btn {
+    min-width: 70px;
+}
+
+.btn-group .btn.active {
+    font-weight: bold;
+}
+
+u {
+    border-bottom-style: dashed;
+    border-width: 1px;
+    text-decoration: none;
+}
+
+.hidden-form {
+    display: none;
+    margin-top: 15px;
+}
+
+p.sample-text strong {
+    min-width: 5em;
+    display: inline-block
+}
+
+.slider-container {
+    margin: 15px 0;
+}
+
+.slider {
+    width: 100%;
+}
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider::-webkit-slider-runnable-track {
+    background: linear-gradient(to right,
+            red 0%, red 10%,
+            orange 11%, orange 29%,
+            yellow 30%, yellow 50%,
+            lightgreen 51%, lightgreen 69%,
+            green 70%, green 90%,
+            darkgreen 91%, darkgreen 100%);
+    height: 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 16px;
+    width: 16px;
+    margin-top: -4px;
+}
+
+#score-slider:disabled {
+    opacity: 15%;
+}

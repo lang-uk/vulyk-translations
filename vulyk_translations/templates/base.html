@@ -1,0 +1,38 @@
+<div>
+    <p class="lead" id="out"></p>
+</div>
+
+<script id="judgeme_template" type="text/x-handlebars-template">
+    {% raw %}
+    <div class="panel-heading mark-errors"><strong>Evaluate Translation</strong></div>
+    <div class="panel-body">
+        <p class="sample-text mark-errors"><strong>English:</strong> <span>{{en}}</span></p>
+        <p class="sample-text mark-errors"><strong>Ukrainian:</strong> <span>{{uk}}</span></p>
+        <hr />
+
+        <label>Rate the translation (0-100):</label>
+        <div class="slider-container">
+            <input type="range" id="score-slider" class="slider" min="0" max="100" value="50">
+            <div class="slider-labels" data-toggle="tooltip" data-html="true" title="
+    <p style='text-align: left;'>
+	<strong>0-10:</strong> Incorrect translation<br/>
+	<strong>11-29:</strong> A few correct keywords, but the meaning is different<br/>
+	<strong>30-50:</strong> Major mistakes in translation<br/>
+	<strong>51-69:</strong> Understandable but contains typos or grammatical errors<br/>
+	<strong>70-90:</strong> Preserves semantics closely<br/>
+	<strong>91-100:</strong> Perfect translation</p>" data-placement="bottom">
+                <span>0</span><span>10</span><span>30</span><span>50</span><span>70</span><span>90</span><span>100</span>
+            </div>
+        </div>
+        
+        <div class="checkbox">
+            <label data-toggle="tooltip" title="Hotkey is 'i'" data-placement="right"><input type="checkbox" id="inappropriate">Inappropriate content (sexual, harassment, hate speech) <u>[i]</u></label>
+        </div>
+        <div class="checkbox">
+            <label data-toggle="tooltip" title="Hotkey is 'g'" data-placement="right"><input type="checkbox" id="garbled">Unintelligible content (the English sentence is gibberish) <u>[g]</u></label>
+        </div>
+    </div>
+    {% endraw %}
+</script>
+
+
