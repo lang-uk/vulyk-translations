@@ -10,7 +10,7 @@
         <p class="sample-text mark-errors"><strong>Ukrainian:</strong> <span>{{uk}}</span></p>
         <hr />
 
-        <label>Rate the translation (0-100):</label>
+        <label>Rate the translation (0-100): <span id="current-score"></span></label>
         <div class="slider-container">
             <input type="range" id="score-slider" class="slider" min="0" max="100" value="50">
             <div class="slider-labels" data-toggle="tooltip" data-html="true" title="
@@ -21,7 +21,9 @@
 	<strong>51-69:</strong> Understandable but contains typos or grammatical errors<br/>
 	<strong>70-90:</strong> Preserves semantics closely<br/>
 	<strong>91-100:</strong> Perfect translation</p>" data-placement="bottom">
-                <span>0</span><span>10</span><span>30</span><span>50</span><span>70</span><span>90</span><span>100</span>
+                <span id="legend-labels">
+                    <span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span>
+                </span>
             </div>
         </div>
         

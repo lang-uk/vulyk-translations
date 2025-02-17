@@ -71,3 +71,21 @@ input[type="range"]::-webkit-slider-thumb {
 #score-slider:disabled {
     opacity: 15%;
 }
+
+#legend-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#legend-labels span {
+    width: 20px;
+    text-align: center;
+}
+
+#legend-labels span:first-child {
+    text-align: left;
+}
+
+#legend-labels span:last-child{
+    text-align: right;
+}

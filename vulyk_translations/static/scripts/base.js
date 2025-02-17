@@ -14,6 +14,7 @@ $(function () {
 
     $(document.body).on("vulyk.next", function (e, data) {
         answer_is_given = false;
+        $("#current-score").text("");
         $(".mark-errors strong").removeClass("text-danger");
         output.html(template(data.result.task.data));
         $('[data-toggle="tooltip"]').tooltip();
@@ -28,6 +29,7 @@ $(function () {
 
         $("#score-slider").change(function () {
             answer_is_given = true;
+            $("#current-score").text($(this).val());
         });
 
         // Hotkey for inappropriate checkbox
