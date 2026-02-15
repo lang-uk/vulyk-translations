@@ -5,9 +5,7 @@ $(function () {
 
     function serialize_form() {
         return{
-            score: $('#score-slider').prop('disabled') ? null : $('#score-slider').val(),
-            inappropriate: $('#inappropriate').prop('checked'),
-            garbled: $('#garbled').prop('checked')
+            score: $('#score-slider').val()
         };
     }
 
@@ -19,26 +17,12 @@ $(function () {
         output.html(template(data.result.task.data));
         $('[data-toggle="tooltip"]').tooltip();
 
-        $('#inappropriate, #garbled').change(function () {
-            if ($('#inappropriate').prop('checked') || $('#garbled').prop('checked')) {
-                $('#score-slider').prop('disabled', true);
-            } else {
-                $('#score-slider').prop('disabled', false);
-            }
-        });
-
         $("#score-slider").change(function () {
             answer_is_given = true;
             $("#current-score").text($(this).val());
         });
-
-        // Hotkey for inappropriate checkbox
-        key("i", function () { $("#inappropriate").click(); });
-
-        // Hotkeys for detailed feedback checkboxes
-        key("g", function () { $("#garbled").click(); });
     }).on("vulyk.save", function (e, callback) {
-        if (answer_is_given || $('#inappropriate').prop('checked') || $('#garbled').prop('checked')) {
+        if (answer_is_given) {
             callback(serialize_form());
         }
         else {

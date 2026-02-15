@@ -15,7 +15,7 @@ class TranslationTaskType(AbstractTaskType):
     task_model = TranslationTask
 
     name = "Оцінка якості перекладу речень"
-    description = "Визначення якості перекладу речень за шкалою від 1 до 5"
+    description = "Визначення якості перекладу речень за шкалою від 0 до 100"
 
     template = "base.html"
     helptext_template = "help.html"
@@ -24,7 +24,6 @@ class TranslationTaskType(AbstractTaskType):
     redundancy = 3
 
     JS_ASSETS = [
-        "static/scripts/keymaster.js",
         "static/scripts/handlebars.js",
         "static/scripts/bootstrap-select.js",
         # "static/scripts/typeahead.js",
