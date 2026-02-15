@@ -21,7 +21,7 @@ class TranslationTaskType(AbstractTaskType):
     helptext_template = "help.html"
     type_name = "translations_qe_task"
 
-    redundancy = 3
+    redundancy = 10
 
     JS_ASSETS = [
         "static/scripts/handlebars.js",
